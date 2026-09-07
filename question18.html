@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Keyboard Activity</h2>
+
+    <input type="text"
+           placeholder="Press a key"
+           onkeydown="keyDown()"
+           onkeyup="keyUp()">
+
+    <p id="result"></p>
+</div>
+
+<script>
+function keyDown() {
+    document.getElementById("result").innerHTML =
+        "A key has been pressed";
+}
+
+function keyUp() {
+    document.getElementById("result").innerHTML =
+        "The key has been released";
+}
+</script>
+
+</body>
+</html>

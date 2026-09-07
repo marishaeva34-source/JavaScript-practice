@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Department Selection</h2>
+
+    <label>Select Department</label>
+
+    <select id="department" onchange="selectDepartment()">
+        <option value="">Select</option>
+        <option value="ICE">ICE</option>
+        <option value="CSE">CSE</option>
+        <option value="EEE">EEE</option>
+        <option value="ICT">ICT</option>
+        <option value="Textile">Textile</option>
+    </select>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function selectDepartment() {
+    let department = document.getElementById("department").value;
+
+    document.getElementById("result").innerHTML =
+        "Selected Department: " + department;
+}
+</script>
+
+</body>
+</html>
