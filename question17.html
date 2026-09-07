@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Right Click Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Right Click Event</h2>
+
+    <button oncontextmenu="rightClick(event)">
+        Right Click Me
+    </button>
+</div>
+
+<script>
+function rightClick(event) {
+    event.preventDefault();
+    alert("Right-click detected!");
+}
+</script>
+
+</body>
+</html>
