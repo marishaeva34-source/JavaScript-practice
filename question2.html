@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Shopping Bill</h2>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+    let product1 = "Rice";
+    let price1 = 70;
+    let quantity1 = 2;
+
+    let product2 = "Milk";
+    let price2 = 90;
+    let quantity2 = 3;
+
+    let product3 = "Bread";
+    let price3 = 60;
+    let quantity3 = 2;
+
+    let total1 = price1 * quantity1;
+    let total2 = price2 * quantity2;
+    let total3 = price3 * quantity3;
+
+    let finalBill = total1 + total2 + total3;
+
+    document.getElementById("result").innerHTML =
+        "Product: " + product1 + "<br>" +
+        "Price: Tk " + price1 + "<br>" +
+        "Quantity: " + quantity1 + "<br>" +
+        "Total: Tk " + total1 + "<br><br>" +
+
+        "Product: " + product2 + "<br>" +
+        "Price: Tk " + price2 + "<br>" +
+        "Quantity: " + quantity2 + "<br>" +
+        "Total: Tk " + total2 + "<br><br>" +
+
+        "Product: " + product3 + "<br>" +
+        "Price: Tk " + price3 + "<br>" +
+        "Quantity: " + quantity3 + "<br>" +
+        "Total: Tk " + total3 + "<br><br>" +
+
+        "<b>Final Bill: Tk " + finalBill + "</b>";
+</script>
+
+</body>
+</html>

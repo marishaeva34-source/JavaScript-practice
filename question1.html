@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Academic Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Student Academic Information</h2>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+    let name = "Umma Marisha Eva";
+    let studentID = "12345";
+    let department = "ICE";
+    let semester = "6th";
+    let cgpa = 3.25;
+
+    let message;
+
+    if (cgpa >= 3.00) {
+        message = "CGPA is 3.00 or above";
+    } else {
+        message = "CGPA is below 3.00";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Student ID: " + studentID + "<br>" +
+        "Department: " + department + "<br>" +
+        "Semester: " + semester + "<br>" +
+        "CGPA: " + cgpa + "<br>" +
+        "Result: " + message;
+</script>
+
+</body>
+</html>
