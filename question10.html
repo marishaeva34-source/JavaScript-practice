@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Restaurant Menu</h2>
+
+    <p>1. Burger - Tk 250</p>
+    <p>2. Pizza - Tk 450</p>
+    <p>3. Sandwich - Tk 200</p>
+    <p>4. Pasta - Tk 300</p>
+    <p>5. Coffee - Tk 150</p>
+
+    <label>Enter your choice</label>
+    <input type="number" id="choice">
+
+    <button onclick="selectFood()">Select</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function selectFood() {
+    let choice = Number(document.getElementById("choice").value);
+    let food;
+    let price;
+
+    switch (choice) {
+        case 1:
+            food = "Burger";
+            price = 250;
+            break;
+
+        case 2:
+            food = "Pizza";
+            price = 450;
+            break;
+
+        case 3:
+            food = "Sandwich";
+            price = 200;
+            break;
+
+        case 4:
+            food = "Pasta";
+            price = 300;
+            break;
+
+        case 5:
+            food = "Coffee";
+            price = 150;
+            break;
+
+        default:
+            document.getElementById("result").innerHTML =
+                "Invalid Choice";
+            return;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Selected Food: " + food + "<br>" +
+        "Price: Tk " + price;
+}
+</script>
+
+</body>
+</html>

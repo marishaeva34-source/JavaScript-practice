@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Even Number Sequence</h2>
+
+    <label>Starting Number</label>
+    <input type="number" id="start">
+
+    <label>Ending Number</label>
+    <input type="number" id="end">
+
+    <button onclick="showEvenNumbers()">Show Numbers</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function showEvenNumbers() {
+    let start = Number(document.getElementById("start").value);
+    let end = Number(document.getElementById("end").value);
+    let result = "";
+
+    for (let i = start; i <= end; i++) {
+        if (i % 2 === 0) {
+            result += i + " ";
+        }
+    }
+
+    document.getElementById("result").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

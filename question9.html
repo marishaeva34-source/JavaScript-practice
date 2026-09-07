@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Number Analyzer</h2>
+
+    <label>Enter a number</label>
+    <input type="number" id="number">
+
+    <button onclick="analyzeNumber()">Analyze</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function analyzeNumber() {
+    let number = Number(document.getElementById("number").value);
+    let type;
+    let evenOdd;
+
+    if (number > 0) {
+        type = "Positive";
+    } else if (number < 0) {
+        type = "Negative";
+    } else {
+        type = "Zero";
+    }
+
+    if (number % 2 === 0) {
+        evenOdd = "Even";
+    } else {
+        evenOdd = "Odd";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Number: " + number + "<br>" +
+        "Type: " + type + "<br>" +
+        "Even/Odd: " + evenOdd;
+}
+</script>
+
+</body>
+</html>

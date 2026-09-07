@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbers 1 to 50</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Numbers from 1 to 50</h2>
+
+    <div id="result"></div>
+</div>
+
+<script>
+let result = "";
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 5 === 0) {
+        continue;
+    }
+
+    result += i + " ";
+}
+
+document.getElementById("result").innerHTML = result;
+</script>
+
+</body>
+</html>
